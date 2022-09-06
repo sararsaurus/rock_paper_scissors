@@ -29,12 +29,13 @@ function getComputerChoice () {
         return 'scissors';
     }
 }
-console.log(getComputerChoice ());
+// console.log(getComputerChoice ());
 
 
 // Single round; step 4
 
 function playRound (playerSelection, computerSelection) {
+    playerSelection = playerSelection.toLowerCase();
     if (playerSelection === 'rock' && computerSelection === 'rock' || playerSelection === 'paper' && computerSelection === 'paper' || playerSelection === 'scissors' && computerSelection === 'scissors'){
         return "Tie!";
     } else if (playerSelection === 'rock' && computerSelection === 'paper') {
@@ -50,10 +51,8 @@ function playRound (playerSelection, computerSelection) {
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
         return "You win! Scissors beats paper";
     }
-
-
 }
 
-const playerSelection = 'rock';
-const computerSelection = getComputerChoice();
+let playerSelection = 'ROCK'
+let computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
