@@ -32,27 +32,32 @@ function getComputerChoice () {
 // console.log(getComputerChoice ());
 
 
-// Single round; step 4
+// Single round; step 4 & 5
 
 function playRound (playerSelection, computerSelection) {
-    playerSelection = playerSelection.toLowerCase();
-    if (playerSelection === 'rock' && computerSelection === 'rock' || playerSelection === 'paper' && computerSelection === 'paper' || playerSelection === 'scissors' && computerSelection === 'scissors'){
+    if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'rock' || playerSelection.toLowerCase() === 'paper' && computerSelection === 'paper' || playerSelection.toLowerCase() === 'scissors' && computerSelection === 'scissors'){
         return "Tie!";
-    } else if (playerSelection === 'rock' && computerSelection === 'paper') {
+    } else if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'paper') {
         return "You lose! Paper beats rock";
-    } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+    } else if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'scissors') {
         return "You win! Rock beats scissors";
-    } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+    } else if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'scissors') {
         return "You lose! Scissors beats paper";
-    } else if (playerSelection === 'paper' && computerSelection === 'rock') {
+    } else if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'rock') {
         return "You win! Paper beats rock";
-    } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+    } else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'rock') {
         return "You lose! Rock beats scissors";
-    } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+    } else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'paper') {
         return "You win! Scissors beats paper";
     }
 }
+//let playerSelection = 'ROCK';
+ 
 
-let playerSelection = 'ROCK'
+// 5-round game; step 6
+
+let playerSelection = 'PAper';
 let computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
+
+//playerSelection = playerSelection.toLowerCase();
